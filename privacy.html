@@ -1,79 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AquaLog Privacy Policy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Privacy Policy — My Nudge</title>
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #1a1a1a;
-      background: #fafafa;
+    :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #1b1b1b;
+        --muted: #4a4a4a;
+        --line: #d0d0d0;
+        --link: #0b57d0;
+        --todo-bg: #fff4c2;
+        --todo-fg: #3d2e00;
+        --warn-bg: #fde7e7;
+        --warn-fg: #5c1010;
+        --warn-line: #b3261e
     }
-    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    h2 { font-size: 1.3rem; margin-top: 1.8rem; }
-    p, li { margin: 0.6rem 0; }
-    .effective { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; }
-    footer { margin-top: 3rem; font-size: 0.9rem; color: #666; }
+
+    @media (prefers-color-scheme:dark) {
+        :root {
+            --bg: #121212;
+            --fg: #ececec;
+            --muted: #bdbdbd;
+            --line: #3a3a3a;
+            --link: #8ab4f8;
+            --todo-bg: #4a3b00;
+            --todo-fg: #fff1b8;
+            --warn-bg: #3b1414;
+            --warn-fg: #ffd9d6;
+            --warn-line: #f28b82
+        }
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.6;
+        overflow-wrap: break-word
+    }
+
+    .wrap {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 1rem 1.125rem 3rem
+    }
+
+    .banner {
+        border: 2px solid var(--warn-line);
+        background: var(--warn-bg);
+        color: var(--warn-fg);
+        padding: .75rem 1rem;
+        border-radius: 8px;
+        margin: 0 0 1.25rem
+    }
+
+    .banner strong {
+        display: block;
+        font-size: 1.1rem
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: 1.25;
+        margin: .5rem 0
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin: 2rem 0 .5rem;
+        padding-top: .5rem;
+        border-top: 1px solid var(--line)
+    }
+
+    a {
+        color: var(--link)
+    }
+
+    a:focus-visible {
+        outline: 3px solid var(--link);
+        outline-offset: 2px
+    }
+
+    .meta {
+        color: var(--muted);
+        margin: .25rem 0
+    }
+
+    nav ol {
+        padding-left: 1.25rem
+    }
+
+    mark.todo {
+        background: var(--todo-bg);
+        color: var(--todo-fg);
+        padding: 0 .25rem;
+        border-radius: 3px;
+        font-weight: 600
+    }
+
+    .note {
+        border-left: 4px solid var(--line);
+        padding: .25rem .75rem;
+        color: var(--muted);
+        margin: .75rem 0
+    }
+
+    code {
+        font-family: ui-monospace, Menlo, Consolas, monospace;
+        font-size: .95em
+    }
+
+    footer {
+        margin-top: 2.5rem;
+        border-top: 1px solid var(--line);
+        padding-top: 1rem;
+        color: var(--muted);
+        font-size: .95rem
+    }
   </style>
 </head>
+
 <body>
-  <h1>Privacy Policy – AquaLog</h1>
-  <p class="effective">Effective date: 2 November 2026</p>
+<div class="wrap">
+  <header>
+    <h1>Privacy Policy — My Nudge</h1>
+    <p class="meta">Effective date: 01-November-2026</p>
+    <p class="meta">Applies to: My Nudge for Android, package <code>com.mynudge</code>, version 1.0.1. My Nudge</p>
+    <p class="meta">See also: <a href="https://ranjitharimbra.github.io/AquaLog-legal/terms.html">Terms of
+      Use</a></p>
+  </header>
+  <main>
+    <p>This policy explains what the My Nudge app stores on your phone, what it does not do, and how separate
+      services such as email, websites and Google Play may handle information.</p>
+    <nav aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#who">1. Who we are</a></li>
+        <li><a href="#summary">2. Summary</a></li>
+        <li><a href="#stored">3. Information the app stores on your device</a></li>
+        <li><a href="#use">4. How the app uses this information</a></li>
+        <li><a href="#outside">5. Information handled outside the app</a></li>
+        <li><a href="#sharing">6. Sharing</a></li>
+        <li><a href="#perms">7. Permissions</a></li>
+        <li><a href="#lock">8. Reminders and your lock screen</a></li>
+        <li><a href="#delete">9. Keeping and deleting your data</a></li>
+        <li><a href="#backup">10. Backups and changing phones</a></li>
+        <li><a href="#security">11. Security</a></li>
+        <li><a href="#children">12. Children</a></li>
+        <li><a href="#rights">13. Your choices and rights</a></li>
+        <li><a href="#health">14. Health information</a></li>
+        <li><a href="#changes">15. Changes to this policy</a></li>
+        <li><a href="#contact">16. Contact</a></li>
+      </ol>
+    </nav>
+    <section id="who" aria-labelledby="who-h">
+      <h2 id="who-h">1. Who we are</h2>
+      <p>My Nudge is provided by My Nudge Admin, based in India</p>
+      <p>For privacy questions and app support, contact <mark class="todo">ranjimist@gmail.com</mark>.</p>
 
-  <p>AquaLog (“the app”) is a privacy-first water intake tracker. We designed it so that <strong>no personal or analytical data leaves your device</strong>.</p>
+    </section>
+    <section id="summary" aria-labelledby="summary-h">
+      <h2 id="summary-h">2. Summary</h2>
+      <ul>
+        <li>My Nudge is designed to log water intake and give optional reminders on your phone, without an
+          account. The app does not request internet access and does not include advertising, analytics or
+          crash-reporting tools.</li>
+        <li>Your drink records, goals and settings are stored in the app’s private storage on your device.
+          The app has no feature that uploads them to us. Reminders and notification actions are handled
+          by Android on your device.</li>
+        <li>Opening this policy in a browser, emailing us, and using Google Play involve separate services.
+          They may process some information under their own policies, as explained in section 5.</li>
+      </ul>
+    </section>
+    <section id="stored" aria-labelledby="stored-h">
+      <h2 id="stored-h">3. Information the app stores on your device</h2>
+      <p>The app stores:</p>
+      <ul>
+        <li><strong>Drink records:</strong> the amount in millilitres, the date and time, the time zone at
+          the time you logged it, and an internal record number. Every record is saved as water; there is
+          no drink-type choice.</li>
+        <li><strong>Daily goals:</strong> each goal amount, the date it started, and an internal record
+          number.</li>
+        <li><strong>Preferences:</strong> your volume unit (ml or fl oz), whether setup is complete, whether
+          reminders are on, the reminder interval, active hours, quiet hours and whether they are on,
+          whether to skip reminders once your goal is met, snooze length, and the app’s built-in cup
+          sizes. This version does not let you edit cup sizes.</li>
+        <li><strong>Reminder timing:</strong> when the app last processed a reminder (whether or not it was
+          shown) and, if you snoozed one, when it is due.</li>
+      </ul>
+      <p>The app uses your device language and region settings to suggest a starting unit, and your device
+        time zone to work out dates. This is not location tracking. Daily totals, progress, streaks and
+        recent history are calculated on your device and are not stored as a separate profile.</p>
+      <p>Android also keeps notification and alarm information and short-lived screen state for the app. This
+        is not an account with us.</p>
+      <p>Your water-intake records can reveal health-related habits. App-private storage stops other apps from
+        reading them in normal use, but anyone using your unlocked phone may see them, and reminders may be
+        visible on your lock screen or in screenshots, depending on your settings.</p>
+      <p>The app does not ask for your name, email address, location, contacts, photos or advertising ID.</p>
+    </section>
+    <section id="use" aria-labelledby="use-h">
+      <h2 id="use-h">4. How the app uses this information</h2>
+      <p>The app uses your records and settings on your device to save and manage your entries, goals and
+        settings, calculate your progress and history, and schedule reminders. It does not use your records
+        for advertising, and it does not send them to us for analysis or sale.</p>
+    </section>
+    <section id="outside" aria-labelledby="outside-h">
+      <h2 id="outside-h">5. Information handled outside the app</h2>
+      <h3>If you contact support</h3>
+      <p>If you email us, we and our email provider receive your email address, your message, any attachments
+        and normal email information. Please do not send health records or other sensitive details unless
+        your question needs them. The app has no email feature and never attaches your drink history to a
+        message.</p>
+      <p>This app do not collect any data and share, so you can uninstall Application from device and all data is earised </p>
+      <h3>This policy page and our website</h3>
+      <p>The app’s policy link opens a fixed web address in your browser or another app you choose. It does
+        not add your drink records, goals or settings to the link. Loading a web page needs internet access,
+        and the website host and your browser may receive normal request information such as your IP address
+        and browser and device details, under their own policies.</p>
+      <p> <a
+              href="https://ranjitharimbra.github.io/AquaLog-legal/privacy.html">My Nudge Privacy Policy</a></p>
+      <h3>Google Play and Android</h3>
+      <p>Google handles downloads and updates of My Nudge under the <a
+              href="https://policies.google.com/privacy">Google Privacy Policy</a>. Depending on your device
+        and settings, Google may give developers installation statistics and crash or performance reports
+        through Google Play. The absence of an in-app crash-reporting tool does not mean no such platform
+        reports exist. My Nudge has no in-app purchases or subscriptions.</p>
 
-  <h2>What data we collect</h2>
-  <p>We do not collect, transmit, sell, or share any personal or usage data.</p>
-  <ul>
-    <li>No user accounts or sign-in</li>
-    <li>No analytics, crash reporting, or advertising SDKs</li>
-    <li>No internet permission — the app works fully offline</li>
-    <li>No cloud backup of your data</li>
-  </ul>
-
-  <h2>Data stored on your device</h2>
-  <p>The following information is stored only in the app’s private storage on your phone:</p>
-  <ul>
-    <li>Water intake entries (amount, time, optional drink type)</li>
-    <li>Daily goal and goal history</li>
-    <li>Cup presets and reminder preferences</li>
-    <li>Display settings (units, theme preference if set)</li>
-  </ul>
-  <p>This data never leaves your device. Android Auto Backup and device-to-device transfer of app data are disabled.</p>
-
-  <h2>Optional goal calculator</h2>
-  <p>If you use the optional “Suggest a goal” calculator, any inputs (such as body weight or activity level) are used only in memory to calculate a suggestion. These values are never saved to disk, logs, or backups.</p>
-
-  <h2>Reminders</h2>
-  <p>Hydration reminders are generated locally on your device using Android’s notification system. We do not send push notifications from any server.</p>
-
-  <h2>Your control</h2>
-  <ul>
-    <li>You can delete all data at any time from Settings → Delete all data.</li>
-    <li>Uninstalling the app or clearing its storage permanently deletes all data with no recovery.</li>
-    <li>You can turn reminders on or off at any time.</li>
-  </ul>
-
-  <h2>Health disclaimer</h2>
-  <p>AquaLog is not a medical device and does not diagnose, treat, cure, or prevent any medical condition. Consult a healthcare professional for medical advice, diagnosis, or treatment.</p>
-
-  <h2>Children</h2>
-  <p>The app is intended for a general audience aged 13 and older. It is not directed at children under 13.</p>
-
-  <h2>Changes to this policy</h2>
-  <p>We may update this Privacy Policy from time to time. The effective date at the top of this page will be revised when changes are made. Continued use of the app after an update constitutes acceptance of the revised policy.</p>
-
-  <h2>Contact</h2>
-  <p>If you have questions about this Privacy Policy, please contact us at:<br>
-  <strong>rxy.gmail.com</strong></p>
-
+      </p>
+    </section>
+    <section id="sharing" aria-labelledby="sharing-h">
+      <h2 id="sharing-h">6. Sharing</h2>
+      <p>The app has no feature for uploading or sharing your drink records, goals or settings with us or
+        anyone else. Support emails and website information are handled by the providers described in
+        section 5.</p>
+      <p>We do not sell personal
+        information” is accurate across every channel]</p>
+    </section>
+    <section id="perms" aria-labelledby="perms-h">
+      <h2 id="perms-h">7. Permissions</h2>
+      <ul>
+        <li><strong>Notifications:</strong> used only for optional hydration reminders. On Android 13 and
+          later you are asked whether to allow them, and you can say no. You can turn reminders off in the
+          app or block notifications in Android settings. Logging drinks works without notifications.</li>
+        <li><strong>Restart and time events:</strong> the app listens for your phone restarting, the app
+          being updated, and the clock or time zone changing, so that it can rebuild your reminder
+          schedule from the settings it already stores. This does not give the app internet access or
+          access to your contacts, location or other apps’ data.</li>
+      </ul>
+    </section>
+    <section id="lock" aria-labelledby="lock-h">
+      <h2 id="lock-h">8. Reminders and your lock screen</h2>
+      <p>Reminders are scheduled on your phone through Android, not sent from a server. Their title and text
+        are generic (“Time for a drink”) and do not show your daily totals. The buttons show a cup amount
+        (for example “Add 250 ml”) and a snooze length.</p>
+      <p>Depending on your Android version, device and notification settings, someone with access to your lock
+        screen may be able to see a reminder or tap Add or Snooze without opening My Nudge. Add records a
+        drink; Snooze changes when the next reminder is due. If you don’t want this, change your lock-screen
+        notification settings for My Nudge in Android.</p>
+    </section>
+    <section id="delete" aria-labelledby="delete-h">
+      <h2 id="delete-h">9. Keeping and deleting your data</h2>
+      <ul>
+        <li>The app does not delete drink or goal history automatically. Records normally stay until you
+          remove them or the app’s storage is cleared. A device fault, software error or damaged settings
+          file can also cause information to be lost or reset.</li>
+        <li>You can edit the amount of, or delete, drinks shown on the Today screen. Deleting a drink
+          briefly offers Undo. Older days can’t be edited one by one.</li>
+        <li><strong>Settings › Delete all data</strong> asks you to confirm. It then cancels scheduled
+          reminders and any current reminder, clears your drink records, goals and settings, and returns
+          the app to setup.</li>
+        <li>Android normally removes the app’s data when you clear its storage or uninstall it. None of
+          these steps guarantees secure physical erasure, and none removes copies outside the app, such as
+          screenshots or emails you sent to support.</li>
+        <li>This version has no export, import or cloud restore feature. We cannot see, retrieve, restore,
+          edit or delete your app records remotely. Deleting app data does not delete support emails or
+          information held by the website host; see section 5.</li>
+      </ul>
+    </section>
+    <section id="backup" aria-labelledby="backup-h">
+      <h2 id="backup-h">10. Backups and changing phones</h2>
+      <p>My Nudge is set up so that Android does not include its data in cloud backups or device-to-device
+        transfers. The app has no backup, export or transfer feature of its own. Do not expect your history
+        to move to a new phone or be recoverable after uninstalling, clearing storage, or losing, resetting
+        or replacing your phone. Actual behaviour can vary by Android version and manufacturer tools. If you
+        used an earlier test version with a different package name, its history does not carry over.</p>
+    </section>
+    <section id="security" aria-labelledby="security-h">
+      <h2 id="security-h">11. Security</h2>
+      <p>Your records are kept in the app’s private storage on your phone. The app does not add its own
+        encryption layer. Protection relies on Android’s access controls and your device’s security, such as
+        your screen lock and device encryption where available. This cannot prevent all access, copying or
+        changes, especially on an unlocked, rooted or compromised device. Keep your phone locked and up to
+        date, and consider what reminders and screenshots may show. No security measure can guarantee
+        information is completely secure.</p>
+    </section>
+    <section id="children" aria-labelledby="children-h">
+      <h2 id="children-h">12. Children</h2>
+      <p>Intended audience any one above 13 years, matching the there is no dynamic content or any public link to third-party pages.</p>
+    </section>
+    <section id="rights" aria-labelledby="rights-h">
+      <h2 id="rights-h">13. Your choices and rights</h2>
+      <p>You can view your recent totals and history, edit or delete drinks shown on the Today screen, and
+        erase all app data in Settings. There is no export and no editor for older entries. We cannot access
+        your app records remotely.</p>
+      <p>To ask about access, correction or deletion of support information we hold, contact ranjimist@gmail.com for any clarification/p>
+      <p>[LEGAL REVIEW: rights, exceptions and complaint routes that apply in the confirmed
+        markets, for example under GDPR or India’s Digital Personal Data Protection Act, 2023, if
+        applicable]</p>
+    </section>
+    <section id="health" aria-labelledby="health-h">
+      <h2 id="health-h">14. Health information</h2>
+      <p>My Nudge is a general wellness tool for tracking water intake. It is not intended to diagnose, treat,
+        cure or prevent any medical condition, and its goals and reminders are not a substitute for
+        professional medical advice. Consult a healthcare professional for medical advice, diagnosis or
+        treatment. See the <a href="terms.html#health">Terms of Use</a>.</p>
+      <p>The app is not a medical device.</p>
+    </section>
+    <section id="changes" aria-labelledby="changes-h">
+      <h2 id="changes-h">15. Changes to this policy</h2>
+      <p>We will review this policy before releasing a change to how the app handles information, for example
+        adding internet access, accounts or third-party tools, and we will update the effective date when it
+        changes. We will tell users through Application update process.</p>
+    </section>
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">16. Contact</h2>
+      <p>My Nudge Admin , ranjimist@gmail.com</p>
+    </section>
+  </main>
   <footer>
-    <p>AquaLog is an offline-only, privacy-first application.</p>
+    <p>Review draft prepared from source commit <code>dd197b3</code> of the app. Technical statements describe
+      the reviewed source and still have to be checked against the released app. <a href="terms.html">Terms of
+        Use</a></p>
   </footer>
+</div>
 </body>
+
 </html>
