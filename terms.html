@@ -1,289 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Terms of Use — My Nudge (Review draft)</title>
+  <title>Terms of Use — My Nudge</title>
+  <meta name="description" content="Terms of Use for My Nudge, an offline water-intake reminder app for Android.">
   <style>
     :root {
-        color-scheme: light dark;
-        --bg: #ffffff;
-        --fg: #1b1b1b;
-        --muted: #4a4a4a;
-        --line: #d0d0d0;
-        --link: #0b57d0;
-        --todo-bg: #fff4c2;
-        --todo-fg: #3d2e00;
-        --warn-bg: #fde7e7;
-        --warn-fg: #5c1010;
-        --warn-line: #b3261e
+      --bg: #ffffff; --fg: #1d2330; --muted: #5b6475; --line: #e3e7ee;
+      --accent: #1a73b8; --box: #f3f7fb; --warn: #fff6e5; --warn-line: #f0d9a8;
     }
-
-    @media (prefers-color-scheme:dark) {
-        :root {
-            --bg: #121212;
-            --fg: #ececec;
-            --muted: #bdbdbd;
-            --line: #3a3a3a;
-            --link: #8ab4f8;
-            --todo-bg: #4a3b00;
-            --todo-fg: #fff1b8;
-            --warn-bg: #3b1414;
-            --warn-fg: #ffd9d6;
-            --warn-line: #f28b82
-        }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #11151c; --fg: #e6e9ef; --muted: #a2abbb; --line: #2a313d; --accent: #6cb4ee; --box: #18202b; --warn: #2a2416; --warn-line: #5a4a24; }
     }
-
-    * {
-        box-sizing: border-box
-    }
-
-    body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-        font-size: 1.0625rem;
-        line-height: 1.6;
-        overflow-wrap: break-word
-    }
-
-    .wrap {
-        max-width: 46rem;
-        margin: 0 auto;
-        padding: 1rem 1.125rem 3rem
-    }
-
-    .banner {
-        border: 2px solid var(--warn-line);
-        background: var(--warn-bg);
-        color: var(--warn-fg);
-        padding: .75rem 1rem;
-        border-radius: 8px;
-        margin: 0 0 1.25rem
-    }
-
-    .banner strong {
-        display: block;
-        font-size: 1.1rem
-    }
-
-    h1 {
-        font-size: 1.75rem;
-        line-height: 1.25;
-        margin: .5rem 0
-    }
-
-    h2 {
-        font-size: 1.3rem;
-        margin: 2rem 0 .5rem;
-        padding-top: .5rem;
-        border-top: 1px solid var(--line)
-    }
-
-    a {
-        color: var(--link)
-    }
-
-    a:focus-visible {
-        outline: 3px solid var(--link);
-        outline-offset: 2px
-    }
-
-    .meta {
-        color: var(--muted);
-        margin: .25rem 0
-    }
-
-    nav ol {
-        padding-left: 1.25rem
-    }
-
-    mark.todo {
-        background: var(--todo-bg);
-        color: var(--todo-fg);
-        padding: 0 .25rem;
-        border-radius: 3px;
-        font-weight: 600
-    }
-
-    .note {
-        border-left: 4px solid var(--line);
-        padding: .25rem .75rem;
-        color: var(--muted);
-        margin: .75rem 0
-    }
-
-    code {
-        font-family: ui-monospace, Menlo, Consolas, monospace;
-        font-size: .95em
-    }
-
-    footer {
-        margin-top: 2.5rem;
-        border-top: 1px solid var(--line);
-        padding-top: 1rem;
-        color: var(--muted);
-        font-size: .95rem
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 20px 64px; }
+    h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 6px; }
+    h2 { font-size: 1.2rem; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+    p, li { margin: 0 0 10px; }
+    ul { padding-left: 22px; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: .95rem; margin: 0 0 24px; }
+    .box { background: var(--box); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+    .warn { background: var(--warn); border: 1px solid var(--warn-line); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .caps { text-transform: none; font-weight: 600; }
+    nav ol { columns: 2; column-gap: 32px; padding-left: 22px; margin: 0; }
+    nav li { margin: 0 0 4px; break-inside: avoid; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 560px) { nav ol { columns: 1; } h1 { font-size: 1.6rem; } }
   </style>
 </head>
-
 <body>
-<div class="wrap">
-  <header>
-    <h1>Terms of Use — My Nudge</h1>
-    <p class="meta">Effective date: 01 November 2026</p>
-    <p class="meta">Applies to: My Nudge for Android, package <code>com.mynudge</code>, version 1.0.1 onwards.
-    </p>
-    <p class="meta">See also: <a href="https://ranjitharimbra.github.io/AquaLog-legal/privacy.html">Privacy
-      Policy</a></p>
-  </header>
-  <main>
-    <p>These terms describe the rules for using My Nudge and its limits, including that it is a wellness tool
-      and not medical advice.</p>
-    <nav aria-label="Contents">
-      <h2>Contents</h2>
-      <ol>
-        <li><a href="#agreement">1. About these terms</a></li>
-        <li><a href="#service">2. What the app does</a></li>
-        <li><a href="#licence">3. Licence to use the app</a></li>
-        <li><a href="#use">4. Acceptable use</a></li>
-        <li><a href="#health">5. Health and wellness</a></li>
-        <li><a href="#reminders">6. Reminders</a></li>
-        <li><a href="#data">7. Your records and data loss</a></li>
-        <li><a href="#ip">8. Ownership</a></li>
-        <li><a href="#support">9. Support and updates</a></li>
-        <li><a href="#ending">10. Ending use</a></li>
-        <li><a href="#liability">11. Warranties and liability</a></li>
-        <li><a href="#law">12. Governing law and disputes</a></li>
-        <li><a href="#changes">13. Changes to these terms</a></li>
-        <li><a href="#contact">14. Contact</a></li>
-      </ol>
-    </nav>
-    <section id="agreement" aria-labelledby="agreement-h">
-      <h2 id="agreement-h">1. About these terms</h2>
-      <p>These terms apply to your use of the My Nudge app provided by Ranjith. Please read them together with
-        our <a href="https://ranjitharimbra.github.io/AquaLog-legal/privacy.html">Privacy Policy</a>.</p>
-      <p>Your use of Google Play is also governed by Google’s own terms.</p>
-    </section>
-    <section id="service" aria-labelledby="service-h">
-      <h2 id="service-h">2. What the app does</h2>
-      <p>My Nudge helps you log water intake, set your own daily goal, view recent totals and history, and get
-        optional, approximate reminders. Tracking works on your device without an account, and your records
-        stay on your device. This version has no accounts, cloud sync, export or import. Opening web links
-        or emailing support uses separate services described in the Privacy Policy.</p>
-    </section>
-    <section id="licence" aria-labelledby="licence-h">
-      <h2 id="licence-h">3. Licence to use the app</h2>
-      <p>We give you a personal, non-exclusive, non-transferable, revocable licence to install and use My
-        Nudge on devices you own or control, for your own personal use.</p>
-      <p>Third-party and open-source components in the app remain under their own licences, and nothing in
-        these terms limits your rights under them.</p>
-    </section>
-    <section id="use" aria-labelledby="use-h">
-      <h2 id="use-h">4. Acceptable use</h2>
-      <p>Please do not:</p>
-      <ul>
-        <li>use the app in a way that breaks the law;</li>
-        <li>copy, change or redistribute the app, or remove its notices, except where the law or an
-          applicable open-source licence allows;</li>
-        <li>present the app as a medical product or use it to give medical advice to others.</li>
-      </ul>
+<main>
 
-    </section>
-    <section id="health" aria-labelledby="health-h">
-      <h2 id="health-h">5. Health and wellness</h2>
-      <p>My Nudge is designed for general wellness tracking. It does not diagnose, treat, cure or prevent any
-        medical condition, and it is not designed to manage a prescribed fluid plan. Consult a healthcare
-        professional for medical advice, diagnosis or treatment.</p>
-      <p>The default goal of 2,000 ml and the range you can choose (500–6,000 ml) are app settings. They are
-        not personalised recommendations or a safe amount for everyone.</p>
-      <p>Check with a healthcare professional before following an intake goal, especially if you have been
-        told to limit fluids, have a kidney, heart, liver or other medical condition, are pregnant or
-        breastfeeding, or take medicine that affects fluid balance. Drinking too much water can be harmful.
-        If you feel unwell, seek medical help.</p>
+  <h1>Terms of Use — My Nudge</h1>
+  <p class="meta">Effective date: 15 November 2026 &nbsp;·&nbsp; Applies to all versions of the My Nudge Android app </p>
 
-    </section>
-    <section id="reminders" aria-labelledby="reminders-h">
-      <h2 id="reminders-h">6. Reminders</h2>
-      <p>Reminders are approximate and may be delayed, missed, skipped or rescheduled. Delivery depends on
-        your app settings, notification permission, lock-screen and Do Not Disturb settings, battery saving,
-        your device and manufacturer, time changes, and whether the app has been force-stopped. If you
-        force-stop the app, open it again so it can reschedule reminders. When the skip-at-goal option is
-        on, reminders stop for the day once your goal is met. Do not rely on My Nudge for medical or
-        time-critical schedules.</p>
-    </section>
-    <section id="data" aria-labelledby="data-h">
-      <h2 id="data-h">7. Your records and data loss</h2>
-      <p>Your records are stored only on your device. This version has no backup, export, transfer or cloud
-        restore feature. Do not rely on your records being recoverable after you delete them, clear storage,
-        uninstall the app, lose, reset or replace your phone, or after a software fault. Android backup and
-        transfer are switched off for the app, but behaviour can vary by device. We cannot recover your
-        records. See the <a
-                href="https://ranjitharimbra.github.io/AquaLog-legal/privacy.html#delete">Privacy Policy</a> for
-        details on deletion.</p>
-    </section>
-    <section id="ip" aria-labelledby="ip-h">
-      <h2 id="ip-h">8. Ownership</h2>
-      <p>The app’s name, design and software are owned by "Ranjith Arimbra" or their licensors. These terms do
-        not transfer them to you. You keep
-        your rights in the information you enter.</p>
-    </section>
-    <section id="support" aria-labelledby="support-h">
-      <h2 id="support-h">9. Support and updates</h2>
-      <p>For help, contact email: mynudgesupport@gmail.com. We may
-        update, change or stop offering the app. This is project intended to help android users without any
-        charge as part of support community</p>
-    </section>
-    <section id="ending" aria-labelledby="ending-h">
-      <h2 id="ending-h">10. Ending use</h2>
-      <p>You can stop using My Nudge at any time by uninstalling it. Uninstalling normally removes your
-        records from the device; see section 7.</p>
+  <div class="box">
+    <strong>Please read these terms carefully.</strong> By downloading, installing or using My Nudge, you agree to these Terms of Use. If you do not agree, do not use the app and uninstall it. The key points: My Nudge is a general wellness tool, not medical advice; reminders may not always arrive on time; your data lives only on your phone and can be lost; and the app is provided “as is”.
+  </div>
 
-    </section>
-    <section id="liability" aria-labelledby="liability-h">
-      <h2 id="liability-h">11. Warranties and liability</h2>
-      <p>We work to keep My Nudge useful and working, but we cannot promise it will be free of errors or
-        always available. Always use app in a safe environment. Never use app is an unsafe place for any
-        reasons.</p>
+  <nav aria-label="Contents">
+    <ol>
+      <li><a href="#about">About these terms</a></li>
+      <li><a href="#eligibility">Who can use the app</a></li>
+      <li><a href="#service">What the app does</a></li>
+      <li><a href="#health">Health and wellness</a></li>
+      <li><a href="#reminders">Reminders</a></li>
+      <li><a href="#data">Your records and data loss</a></li>
+      <li><a href="#licence">Licence to use the app</a></li>
+      <li><a href="#acceptable-use">Acceptable use</a></li>
+      <li><a href="#ownership">Ownership</a></li>
+      <li><a href="#third-party">Google Play and third parties</a></li>
+      <li><a href="#updates">Updates and availability</a></li>
+      <li><a href="#warranties">Disclaimer of warranties</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#indemnity">Indemnity</a></li>
+      <li><a href="#termination">Ending these terms</a></li>
+      <li><a href="#law">Governing law and disputes</a></li>
+      <li><a href="#general">General</a></li>
+      <li><a href="#changes">Changes to these terms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
 
-    </section>
-    <section id="law" aria-labelledby="law-h">
-      <h2 id="law-h">12. Governing law and disputes</h2>
-      <p>These Terms are governed by the laws of India, without regard to conflict-of-law rules.</p>
-      <p>If you have a concern or dispute about My Nudge, please contact us first at
-        mynudgesupport@gmail.com. . We will try to resolve it
-        informally and in good faith within a reasonable time.
-      </p>
-      <p>If it is not resolved, the courts at
-        Bengaluru - India , India will have jurisdiction,
-        subject to the next paragraph.
-      </p>
-      <p>Nothing in these Terms limits any rights you have under the Consumer Protection Act, 2019, or other
-        consumer protection laws that apply to you. This includes your right to approach the appropriate
-        Consumer Disputes Redressal Commission. If you live outside India, you may also have rights under
-        the
-        mandatory laws of your country of residence that these Terms cannot override.</p>
-      <p>If any part of these Terms is found to be unenforceable, the rest will remain in effect.</p>
-    </section>
-    <section id="changes" aria-labelledby="changes-h">
-      <h2 id="changes-h">13. Changes to these terms</h2>
-      <p>When we update these terms we will change the effective date and tell users through application
-        update.</p>
-    </section>
-    <section id="contact" aria-labelledby="contact-h">
-      <h2 id="contact-h">14. Contact</h2>My Nudge Admin @ email : mynudgesupport@gmail.com
-    </section>
-  </main>
+  <h2 id="about">1. About these terms</h2>
+  <p>These Terms of Use (“terms”) form an agreement between you and Ranjith Arimbra, the independent developer of My Nudge, based in India (“we”, “us”, “our”). They govern your use of the My Nudge Android app (“the app”). Our <a href="privacy.html">Privacy Policy</a> explains how information is handled and forms part of these terms.</p>
+
+  <h2 id="eligibility">2. Who can use the app</h2>
+  <p>You must be at least 13 years old to use the app. If you are under 18 (or the age of majority where you live), you may use the app only with the involvement and consent of a parent or legal guardian, who agrees to these terms on your behalf and is responsible for your use of the app.</p>
+
+  <h2 id="service">3. What the app does</h2>
+  <p>My Nudge helps you log how much you drink, set a daily intake goal and receive reminders. It works entirely on your device, without an account or internet connection. Features may change over time as described in section 11.</p>
+
+  <h2 id="health">4. Health and wellness</h2>
+  <div class="warn">
+    <p><strong>My Nudge is not a medical device and does not provide medical advice.</strong> It does not diagnose, treat, cure, monitor or prevent any disease or medical condition.</p>
+  </div>
+  <ul>
+    <li>Goals, suggestions and reminders in the app are general and are not tailored to your health. The right fluid intake varies with age, weight, activity, climate, pregnancy, medication and medical conditions.</li>
+    <li>If you have a condition that affects how much fluid you should drink — for example kidney, heart or liver disease, or a fluid restriction from your doctor — or if you are pregnant or breastfeeding, consult a qualified healthcare professional before setting a goal or following reminders, and follow their advice over the app.</li>
+    <li>Drinking too much water in a short time can be harmful. Do not force yourself to meet a goal, and stop and seek medical advice if you feel unwell.</li>
+    <li>Never ignore or delay seeking professional medical advice because of something in the app. In an emergency, contact your local emergency services immediately.</li>
+  </ul>
+  <p>You are solely responsible for your health decisions and for how you use the app’s goals and reminders.</p>
+
+  <h2 id="reminders">5. Reminders</h2>
+  <p>Reminders are scheduled by Android on your device. Their delivery depends on factors outside our control, including battery optimisation, Do Not Disturb, notification settings, device restarts, manufacturer customisations and Android updates. Reminders may be delayed, silenced or missed. <strong>Do not rely on the app for anything critical</strong>, such as medication schedules or medically required fluid intake.</p>
+
+  <h2 id="data">6. Your records and data loss</h2>
+  <p>Your records are stored only on your device. We do not receive, back up or have access to them. Your records will be permanently lost if you uninstall the app, clear its storage, use “Delete all data”, reset or lose your phone, or if your device or storage fails. The app has no export or cloud restore, and we cannot recover lost data. You are responsible for your device and the data on it.</p>
+
+  <h2 id="licence">7. Licence to use the app</h2>
+  <p>Subject to these terms, we grant you a personal, limited, non-exclusive, non-transferable, non-sublicensable and revocable licence to download, install and use the app on Android devices that you own or control, for your own personal, non-commercial use. All rights not expressly granted to you are reserved by us.</p>
+
+  <h2 id="acceptable-use">8. Acceptable use</h2>
+  <p>You agree not to:</p>
+  <ul>
+    <li>copy, modify, distribute, sell, rent, lease or sublicense the app or any part of it;</li>
+    <li>decompile, reverse engineer or disassemble the app, except to the extent that applicable law expressly allows this despite this restriction;</li>
+    <li>remove or alter any copyright, trademark or other notices in the app;</li>
+    <li>use the app for any unlawful purpose or in breach of these terms;</li>
+    <li>use the app in a way that is unsafe — for example, while driving or operating machinery.</li>
+  </ul>
+
+  <h2 id="ownership">9. Ownership</h2>
+  <p>The app, including its code, design, text, graphics, name and logo, is owned by Ranjith Arimbra and is protected by copyright, trademark and other intellectual property laws. The licence in section 7 does not transfer any ownership rights to you. The records you enter belong to you.</p>
+
+  <h2 id="third-party">10. Google Play and third parties</h2>
+  <p>The app is distributed through Google Play. Your use of Google Play, and of Android and your device, is governed by the terms and policies of Google and your device manufacturer, which are separate from these terms. We are not responsible for third-party services, websites or software, including your email provider if you contact us.</p>
+
+  <h2 id="updates">11. Updates and availability</h2>
+  <p>We may update, change, suspend or discontinue the app, or any feature of it, at any time, with or without notice. Some updates may be required for the app to keep working. We are not obliged to provide support, maintenance or updates, but we will try to respond to support emails within a reasonable time. If we stop offering the app, a copy already on your device may continue to work, but it will no longer be updated.</p>
+
+  <h2 id="warranties">12. Disclaimer of warranties</h2>
+  <p class="caps">To the maximum extent permitted by applicable law, the app is provided “as is” and “as available”, without warranties of any kind, whether express, implied or statutory. This includes, without limitation, any implied warranties of merchantability, fitness for a particular purpose, accuracy, non-infringement, and that the app will be uninterrupted, timely, secure or error-free, or that reminders will be delivered.</p>
+
+  <h2 id="liability">13. Limitation of liability</h2>
+  <p class="caps">To the maximum extent permitted by applicable law:</p>
+  <ul>
+    <li>we will not be liable for any indirect, incidental, special, consequential, exemplary or punitive damages, or for any loss of data, health outcomes, missed or late reminders, or loss of profits, arising out of or relating to the app or these terms, even if we have been advised of the possibility of such damages;</li>
+    <li>our total liability for all claims arising out of or relating to the app or these terms will not exceed the greater of (a) the amount you paid for the app, if any, and (b) INR 1,000.</li>
+  </ul>
+  <p>Nothing in these terms excludes or limits any liability or consumer right that cannot be excluded or limited under applicable law, including under India’s Consumer Protection Act, 2019. If you live in a place where these limits are not permitted, they apply to you only to the extent permitted there.</p>
+
+  <h2 id="indemnity">14. Indemnity</h2>
+  <p>To the extent permitted by law, you agree to indemnify and hold us harmless from any claims, losses, liabilities and expenses (including reasonable legal fees) arising from your misuse of the app or your breach of these terms.</p>
+
+  <h2 id="termination">15. Ending these terms</h2>
+  <p>You can stop using the app at any time by uninstalling it. We may end your licence if you breach these terms. When these terms end, you must stop using the app and uninstall it. Sections 4, 6, 9 and 12 to 17 continue to apply after these terms end.</p>
+
+  <h2 id="law">16. Governing law and disputes</h2>
+  <p>These terms are governed by the laws of India, without regard to conflict-of-law rules. If you have a concern or dispute, please contact us first at <a href="mailto:mynudgesupport@gmail.com">mynudgesupport@gmail.com</a>; we will try to resolve it informally within 30 days. If it cannot be resolved, the courts at Bengaluru, Karnataka, India will have exclusive jurisdiction, subject to any mandatory right you have under applicable law to bring proceedings where you live.</p>
+
+  <h2 id="general">17. General</h2>
+  <ul>
+    <li><strong>Entire agreement:</strong> these terms and our Privacy Policy are the entire agreement between you and us about the app.</li>
+    <li><strong>Severability:</strong> if any part of these terms is found invalid or unenforceable, the rest remains in full effect.</li>
+    <li><strong>No waiver:</strong> if we do not enforce a right, that does not waive it.</li>
+    <li><strong>Assignment:</strong> you may not transfer your rights under these terms. We may transfer ours, for example if the app is transferred to another developer, provided your rights are not reduced.</li>
+    <li><strong>Events beyond our control:</strong> we are not responsible for failures or delays caused by events beyond our reasonable control.</li>
+  </ul>
+
+  <h2 id="changes">18. Changes to these terms</h2>
+  <p>We may update these terms from time to time. When we do, we will update the effective date at the top of this page and, for significant changes, mention it in the app’s update notes on Google Play. Changes do not apply retroactively. If you continue to use the app after changes take effect, you accept the updated terms; if you do not agree, stop using the app and uninstall it.</p>
+
+  <h2 id="contact">19. Contact</h2>
+  <p><strong>Ranjith Arimbra</strong> (developer of My Nudge)<br>
+    Bengaluru, Karnataka, India<br>
+    Email: <a href="mailto:mynudgesupport@gmail.com">mynudgesupport@gmail.com</a></p>
+
   <footer>
-    <p>Review draft . Technical statements describe
-      the reviewed source and still have to be checked against the released app. <a
-              href="https://ranjitharimbra.github.io/AquaLog-legal/privacy.html">Privacy Policy</a></p>
+    <p>See also: <a href="privacy.html">Privacy Policy</a></p>
+    <p>© 2026 Ranjith Arimbra. My Nudge Terms of Use.</p>
   </footer>
-</div>
-</body>
 
+</main>
+</body>
 </html>
